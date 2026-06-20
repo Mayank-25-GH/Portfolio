@@ -46,10 +46,10 @@ const Contact = () => {
         Got a project or idea? Let's build something amazing together!
       </p>
       <div
-        className="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5"
-        style={{ width: "1300px" }}
+        className="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5 justify-content-center mx-auto"
+        style={{ width: "100%", maxWidth: "1300px" }}
       >
-        <div className="container my-5">
+        <div className="col my-5">
           <div className="text-center">
             <h2 className="fw-bold mb-4">Contact Information</h2>
             <br />
@@ -119,87 +119,89 @@ const Contact = () => {
           </div>
         </div>
 
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="card mb-3 p-4"
-          style={{ width: "520px" }}
-        >
-          <h4 className="text-center">
-            <b>Send Message</b>
-          </h4>
-          <br />
-          <label
-            htmlFor="exampleFormControlInput1"
-            className="form-label text-center"
+        <div className="col">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="card mb-3 p-4 mx-auto"
+            style={{ width: "100%", maxWidth: "520px" }}
           >
-            Name
-          </label>
-          <input
-            name="user_name"
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-            placeholder="Your Name"
-            required
-          />
-          <br />
-
-          <label
-            htmlFor="exampleFormControlInput1"
-            className="form-label text-center"
-          >
-            Your Email
-          </label>
-          <input
-            name="user_email"
-            type="email"
-            className="form-control"
-            id="exampleFormControlInput1"
-            placeholder="name@example.com"
-            required
-          />
-          <br />
-
-          <label
-            htmlFor="exampleFormControlTextarea1"
-            className="form-label text-center"
-          >
-            Your Message
-          </label>
-          <textarea
-            name="message"
-            className="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-            placeholder="Hi Mayank, I'd like to talk about..."
-            required
-          />
-          <br />
-          <button
-            type="submit"
-            className="btn btn-primary p-2"
-            disabled={currentState}
-          >
-            {currentState ? <b>Sending...</b> : <b>Send Message</b>}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-send"
-              aria-hidden="true"
+            <h4 className="text-center">
+              <b>Send Message</b>
+            </h4>
+            <br />
+            <label
+              htmlFor="exampleFormControlInput1"
+              className="form-label text-center"
             >
-              <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
-              <path d="m21.854 2.147-10.94 10.939"></path>
-            </svg>
-          </button>
-        </form>
+              Name
+            </label>
+            <input
+              name="user_name"
+              type="text"
+              className="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Your Name"
+              required
+            />
+            <br />
+
+            <label
+              htmlFor="exampleFormControlInput1"
+              className="form-label text-center"
+            >
+              Your Email
+            </label>
+            <input
+              name="user_email"
+              type="email"
+              className="form-control"
+              id="exampleFormControlInput1"
+              placeholder="name@example.com"
+              required
+            />
+            <br />
+
+            <label
+              htmlFor="exampleFormControlTextarea1"
+              className="form-label text-center"
+            >
+              Your Message
+            </label>
+            <textarea
+              name="message"
+              className="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              placeholder="Hi Mayank, I'd like to talk about..."
+              required
+            />
+            <br />
+            <button
+              type="submit"
+              className="btn btn-primary p-2"
+              disabled={currentState}
+            >
+              {currentState ? <b>Sending...</b> : <b>Send Message</b>}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-send"
+                aria-hidden="true"
+              >
+                <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
+                <path d="m21.854 2.147-10.94 10.939"></path>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );

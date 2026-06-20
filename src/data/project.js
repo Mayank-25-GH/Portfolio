@@ -6,7 +6,7 @@ export const projects = [
     image: "/portfolio.png",
     tech: ["React", "Bootstrap", "JavaScript"],
     github: "https://github.com/Mayank-25-GH/Portfolio",
-    demo: "https://mayank-25-gh.github.io/Portfolio/",
+    demo: "https://portfolio-rose-gamma-44.vercel.app/",
   },
   {
     id: 2,
