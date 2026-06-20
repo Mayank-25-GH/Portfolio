@@ -1,0 +1,43 @@
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 70px;
+}
+
+/* .hero-section {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("/background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+} */
+
+.header {
+  margin-right: 25px;
+  font-size: 18px;
+}
+
+.card {
+  margin: 5px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.skills-category {
+  text-align: center;
+  margin: 30px 25px;
+}
+
+.button {
+  margin: 25px;
+}
